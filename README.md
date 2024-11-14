@@ -65,7 +65,7 @@ Create a landing page that accepts sign-up information on a form with decorative
 					- [ ] Upper-case names
 					- [ ] \_@\_.\_ email structure, expect username to begin with letter, case-insensitive, expect lower case letters for domain with 2-3 character TLD
 					- [ ] expect 10 digit phone number USA layout, either separated with hyphen or no separation
-					- [ ] accept 
+					- [ ] expect any character except whitespace for password
 			- [ ] Submit button
 		- [ ] Have an account with anchor
 - [ ] Responsive style guide
