@@ -8,9 +8,168 @@
   font-style: normal;
 }
 
+
+
+* { 
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --accent-color: rgb(70 90 30);
+  --prompt-margin: 3rem;
+  --shadow-color: rgb(0 0 0 / 0.1);
+  --dark-font: rgb(32 32 32);
+  --light-font: rgb(235 235 235);
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  height: 100vh;
+  display: flex;
+  font-family: 'Arial', 'Helvetica', sans-serif;
 }
 
+#splash {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  color: transparent;
+  background-image: url("./res/img/fern-halie-west-unsplash.jpg");
+  background-size:cover;
+  flex: 2;
+}
+
+#prompt {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: var(--light-font);
+  padding: 6rem 0;
+}
+
+#banner {
+  position: relative;
+  top: 20vh;
+  display: flex;
+  background-color: rgb(0 0 0 / 0.5);
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+}
+
+h1 {
+  color: white;
+  font-size: 6rem;
+}
+
+img {
+  height: 8rem;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: whitesmoke;
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+
+footer > a {
+  color: inherit;
+  padding: 0 0.5ch;
+}
+
+#shill {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 3rem var(--prompt-margin);
+  color: rgb(32, 32, 32);
+  width: 55ch;
+}
+
+#shill > p {
+  margin-bottom: 1em;
+}
+
+#prompt > p {
+  color: var(--dark-font);
+  margin-left: 3rem;
+}
+
+#prompt > p > a {
+  color: var(--accent-color);;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+fieldset {
+  background-color: white;
+  border: none;
+  box-shadow: 0em 0.25em 0.5em rgb(0 0 0 / 0.2);
+  padding: 0 1rem 3rem var(--prompt-margin);
+}
+
+fieldset > p {
+  font-size: 1.5rem;
+  margin: 1.5rem 0 ;
+  font-weight: bold;
+  color: var(--dark-font);
+}
+
+.fields {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  gap: 1.5rem 5rem;
+}
+
+label{
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.25ch;
+  line-height: 2;
+  color: rgb(68, 68, 68)
+}
+
+input { 
+  position: relative;
+  height: 1rem;
+  padding: 0.6em 0.6em;
+  width: 30ch;
+  font-size: 1.15rem;
+  border: 1px solid rgb(201, 201, 201);
+  border-radius: 0.25rem;
+}
+
+input:focus  {
+  background-color: transparent;
+  box-shadow: 0.25rem 0.25rem 0.25rem rgb(0 0 0 / 0.1);
+}
+
+input:user-invalid {
+  border: 1px solid rgb(255, 180, 100);
+}
+
+input:placeholder-shown {
+  border: 1px solid rgb(107, 161, 0);
+}
+
+button {
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1em 3em;
+  margin: 2rem var(--prompt-margin);
+  background-color: var(--accent-color);
+  border: none;
+  border-radius: 0.25em;
+  box-shadow: 0.25rem 0.25rem 0.25rem var(--shadow-color);
+}

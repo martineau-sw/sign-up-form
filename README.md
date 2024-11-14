@@ -52,7 +52,7 @@ Create a landing page that accepts sign-up information on a form with decorative
 	- [x] Prompt
 		- [x] Shill 1
 		- [x] Shill 2 with emphasis
-		- [ ] Form
+		- [x] Form
 			- [x] Form
 			- [x] Fieldset
 				- [x] Header/legend
@@ -68,16 +68,14 @@ Create a landing page that accepts sign-up information on a form with decorative
 					- [x] expect any character except whitespace for password
 			- [x] Submit button
 		- [x] Have an account with anchor
-- [ ] Responsive style guide
-	- [ ] Body(?)
-		- [ ] Flex
-	- [ ] Banner container
-		- [ ] Transparent background color
-		- [ ] Flex
-	- [ ] input
-		- [ ] :valid(?)
-		- [ ] :invalid & ::after (combine somehow?)
-		- [ ] :focus(?)
+- [x] Responsive style guide
+	- [x] Body(?)
+		- [x] Flex
+	- [x] Banner container
+		- [x] Transparent background color
+		- [x] Flex
+	- [x] input
+		- [x] :invalid & ::after (combine somehow?)
 
 
 #### Patterns

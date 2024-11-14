@@ -13,86 +13,94 @@
   </style>
 </head>
 <body>
-  <div id="#splash">
-    <div id="#banner">
+  <div id="splash">
+    <div id="banner">
       <img src="./res/img/odin-lined.png">
       <h1>Odin</h1>
-      <footer>Photo by <a href="https://unsplash.com/@haliewestphoto" target="_blank" rel="noreferrer">Halie West</a> on <a href="https://unsplash.com/" target="_blank" rel="noreferrer">Unsplash</a></footer>
     </div>
+    <footer>Photo by <a href="https://unsplash.com/@haliewestphoto" target="_blank" rel="noreferrer">Halie West</a> on <a href="https://unsplash.com/" target="_blank" rel="noreferrer">Unsplash</a></footer>
   </div>
 
   <div id="prompt">
-    <p>
-      This is not a real online service! You know you need something
-      like this in your life to help you realize your deepest dreams.
-      Sign up <em>now</em> to get started.
-    </p>
-
-    <p>
-      You <em>know</em> you want to.
-    </p>
+    <div id="shill">
+      <p>
+        This is not a real online service! You know you need something
+        like this in your life to help you realize your deepest dreams.
+        Sign up <em>now</em> to get started.
+      </p>
+      
+      <p>
+        You <em>know</em> you want to.
+      </p>
+    </div>
+    
 
     <form>
       <fieldset>
-        <legend>Let's do this!</legend>
+        <p>Let's do this!</p>
+        <div class="fields">
+          <div class="name field">
+            <label for="first_name">First Name</label>
+            <input 
+              type="text" 
+              id="first_name" 
+              name="first_name"
+              pattern="[A-Z]{1}\w*"
+              placeholder=""
+              required>
+          </div>
+          
 
-        <div class="name field">
-          <label for="first_name">First Name</label>
-          <input 
-            type="text" 
-            id="first_name" 
-            name="first_name"
-            pattern="[A-Z]{1}\w*"
-            required>
-        </div>
+          <div class="name field">
+            <label for="last_name">Last Name</label>
+            <input
+              type="text" 
+              id="last_name" 
+              name="last_name"
+              pattern="[A-Z]{1}\w*">
+          </div>
 
-        <div class="name field">
-          <label for="last_name">Last Name</label>
-          <input 
-            type="text" 
-            id="last_name" 
-            name="last_name"
-            pattern="[A-Z]{1}\w*"
-            required>
-        </div>
+          <div class="email field">
+            <label for="email">Email</label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email"
+              pattern="[\w]{1}[\w\d]*(@[\w]{1}[a-z0-9]+\.[a-z]{2,3})"
+              placeholder=""
+              required>
+          </div>
 
-        <div class="email field">
-          <label for="email">Email</label>
-          <input 
-            type="email" 
-            id="email" 
-            name="email"
-            pattern="[\w]{1}[\w\d]*(@[\w]{1}[a-z0-9]+\.[a-z]{2,3})"
-            required>
-        </div>
+          <div class="phone field">
+            <label for="phone">Phone Number</label>
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone"
+              pattern="\(?\d{3}\)?(-|.| )?\d{3}(-|.| )?\d{4}">
+          </div>
 
-        <div class="phone field">
-          <label for="phone">Phone Number</label>
-          <input 
-            type="tel" 
-            id="phone" 
-            name="phone"
-            pattern="\(?\d{3}\)?(-|.| )?\d{3}(-|.| )?\d{4}">
-        </div>
+          <div class="password field">
+            <label for="password">Password</label>
+            <input 
+              type="password" 
+              id="password" 
+              name="password"
+              pattern="\S{8,25}"
+              placeholder=""
+              required>
+          </div>
 
-        <div class="password field">
-          <label for="password">Password</label>
-          <input 
-            type="password" 
-            id="password" 
-            name="password"
-            pattern="\S{8,25}"
-            required>
-        </div>
-
-        <div class="confirm field">
-          <label for="confirm">Confirm Password</label>
-          <input 
-            type="password" 
-            id="password" 
-            name="password"
-            pattern="\S{8,25}"
-            required>
+          <div class="confirm field">
+            <label for="confirm">Confirm Password</label>
+            <input 
+              type="password" 
+              id="confirm" 
+              name="password"
+              pattern="\S{8,25}"
+              placeholder=""
+              required>
+          </div>
         </div>
       </fieldset>
 
