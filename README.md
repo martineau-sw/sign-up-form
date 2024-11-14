@@ -35,15 +35,15 @@ Create a landing page that accepts sign-up information on a form with decorative
 
 #### To do
 
-- [ ] Gather assets
-	- [ ] Font
-	- [ ] Logo
-	- [ ] Background image
-- [ ] Create index.html and style.css
+- [x] Gather assets
+	- [x] Font
+	- [x] Logo
+	- [x] Background image
+- [x] Create index.html and style.css
 - [ ] Structure HTML
-	- [ ] Head
-		- [ ] Link stylesheet
-		- [ ] Link font
+	- [x] Head
+		- [x] Link stylesheet
+		- [x] Inline font ~~Link font~~
 	- [ ] Splash container
 		- [ ] Banner container
 			- [ ] Odin logo
