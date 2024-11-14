@@ -40,34 +40,34 @@ Create a landing page that accepts sign-up information on a form with decorative
 	- [x] Logo
 	- [x] Background image
 - [x] Create index.html and style.css
-- [ ] Structure HTML
+- [x] Structure HTML
 	- [x] Head
 		- [x] Link stylesheet
 		- [x] Inline font ~~Link font~~
-	- [ ] Splash container
-		- [ ] Banner container
-			- [ ] Odin logo
-			- [ ] Odin header
-		- [ ] Caption(?)
-	- [ ] Prompt
-		- [ ] Shill 1
-		- [ ] Shill 2 with emphasis
+	- [x] Splash container
+		- [x] Banner container
+			- [x] Odin logo
+			- [x] Odin header
+		- [x] Footer ~~Caption(?)~~
+	- [x] Prompt
+		- [x] Shill 1
+		- [x] Shill 2 with emphasis
 		- [ ] Form
-			- [ ] Form
-			- [ ] Fieldset
-				- [ ] Header/legend
-				- [ ] First name input field
-				- [ ] Last name input field
-				- [ ] Email input field
-				- [ ] Phone input field
-				- [ ] Password input fields, minlength
-				- [ ] Validate all input fields with pattern regex
-					- [ ] Upper-case names
-					- [ ] \_@\_.\_ email structure, expect username to begin with letter, case-insensitive, expect lower case letters for domain with 2-3 character TLD
-					- [ ] expect 10 digit phone number USA layout, either separated with hyphen or no separation
-					- [ ] expect any character except whitespace for password
-			- [ ] Submit button
-		- [ ] Have an account with anchor
+			- [x] Form
+			- [x] Fieldset
+				- [x] Header/legend
+				- [x] First name input field
+				- [x] Last name input field
+				- [x] Email input field
+				- [x] Phone input field
+				- [x] Password input fields, minlength
+				- [x] Validate all input fields with pattern regex
+					- [x] Upper-case names
+					- [x] \_@\_.\_ email structure, expect username to begin with letter, case-insensitive, expect lower case letters for domain with 2-3 character TLD
+					- [x] expect 10 digit phone number USA layout, either separated with hyphen or no separation
+					- [x] expect any character except whitespace for password
+			- [x] Submit button
+		- [x] Have an account with anchor
 - [ ] Responsive style guide
 	- [ ] Body(?)
 		- [ ] Flex
@@ -78,5 +78,15 @@ Create a landing page that accepts sign-up information on a form with decorative
 		- [ ] :valid(?)
 		- [ ] :invalid & ::after (combine somehow?)
 		- [ ] :focus(?)
-	
+
+
+#### Patterns
+
+name pattern: `[A-Z]{1}\w*`
+
+email pattern: `[\w]{1}[\w\d]*(@[\w]{1}[a-z0-9]+\.[a-z]{2,3})`
+
+phone pattern: `\(?\d{3}\)?(-|.| )?\d{3}(-|.| )?\d{4}`
+
+password pattern: `\S{8,25}`
 
