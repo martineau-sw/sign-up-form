@@ -33,3 +33,47 @@ Create a landing page that accepts sign-up information on a form with decorative
 			- submit button
 			- p login redirect
 
+#### To do
+
+- [ ] Gather assets
+	- [ ] Font
+	- [ ] Logo
+	- [ ] Background image
+- [ ] Create index.html and style.css
+- [ ] Structure HTML
+	- [ ] Splash container
+		- [ ] Banner container
+			- [ ] Odin logo
+			- [ ] Odin header
+		- [ ] Caption(?)
+	- [ ] Prompt
+		- [ ] Shill 1
+		- [ ] Shill 2 with emphasis
+		- [ ] Form
+			- [ ] Form
+			- [ ] Fieldset
+				- [ ] Header/legend
+				- [ ] First name input field
+				- [ ] Last name input field
+				- [ ] Email input field
+				- [ ] Phone input field
+				- [ ] Password input fields, minlength
+				- [ ] Validate all input fields with pattern regex
+					- [ ] Upper-case names
+					- [ ] \_@\_.\_ email structure, expect username to begin with letter, case-insensitive, expect lower case letters for domain with 2-3 character TLD
+					- [ ] expect 10 digit phone number USA layout, either separated with hyphen or no separation
+					- [ ] accept 
+			- [ ] Submit button
+		- [ ] Have an account with anchor
+- [ ] Responsive style guide
+	- [ ] Body(?)
+		- [ ] Flex
+	- [ ] Banner container
+		- [ ] Transparent background color
+		- [ ] Flex
+	- [ ] input
+		- [ ] :valid(?)
+		- [ ] :invalid & ::after (combine somehow?)
+		- [ ] :focus(?)
+	
+
