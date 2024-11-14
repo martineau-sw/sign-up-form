@@ -8,8 +8,6 @@
   font-style: normal;
 }
 
-
-
 * { 
   margin: 0;
   padding: 0;
@@ -18,15 +16,16 @@
 :root {
   --accent-color: rgb(70 90 30);
   --prompt-margin: 3rem;
-  --shadow-color: rgb(0 0 0 / 0.1);
-  --dark-font: rgb(32 32 32);
-  --light-font: rgb(235 235 235);
+  --shadow-light: rgb(0 0 0 / 0.2);
+  --shadow-lighter: rgb(0 0 0 / 0.1);
+  --font-dark: rgb(32 32 32);
+  --font-light: rgb(235 235 235);
+  --background-light: rgb(200 200 200);
+  --background-lighter: rgb(255 255 255);
   font-size: clamp(6px, 3vw, 16px);
 }
 
 body {
-  margin: 0;
-  padding: 0;
   min-height: 100vh;
   display: flex;
   font-family: 'Arial', 'Helvetica', sans-serif;
@@ -44,11 +43,17 @@ body {
   flex: 2;
 }
 
+#prompt > #shill,
+form > p, 
+fieldset {
+  padding: 0 var(--prompt-margin);
+}
+
 #prompt {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  background-color: var(--light-font);
+  background-color: var(--background-lighter);
   padding: 12rem 0;
   flex: 3;
 }
@@ -65,25 +70,12 @@ body {
 #shill {
   font-weight: bold;
   font-size: 1.5rem;
-  color: rgb(32, 32, 32);
+  color: var(--dark-font);
   width: clamp(18ch, 75%, 60ch);
 }
 
-#prompt > #shill,
-#form > p, 
-fieldset {
-  padding: 0 3rem;
-}
-
-.fields {
-  display: flex;
-  flex-flow: row wrap;
-  align-content: center;
-  gap: 1.5rem;
-}
-
 h1 {
-  color: white;
+  color: var(--font-light);
   font-size: 6rem;
 }
 
@@ -95,36 +87,29 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: whitesmoke;
+  color: var(--font-light);
   font-weight: 100;
 }
 
 footer > a {
-  color: inherit;
+  color: var(--font-light);
   padding: 0 0.5ch;
+}
+
+footer > a:visited {
+  color: var(--font-light);
 }
 
 #shill > p {
   margin-bottom: 1em;
 }
 
-#prompt > p {
-  color: var(--dark-font);
-  margin-left: 3rem;
-}
-
-#prompt > p > a {
-  color: var(--accent-color);;
-  font-weight: bold;
-  text-decoration: none;
-}
-
 fieldset {
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: var(--background-lighter);
   border: none;
-  box-shadow: 0em 0.25em 0.5em rgb(0 0 0 / 0.2);
+  box-shadow: 0em 0.25em 0.5em var(--shadow-light);
   padding-bottom: 3rem;
 }
 
@@ -133,6 +118,13 @@ fieldset > p {
   margin: 1.5rem 0 ;
   font-weight: bold;
   color: var(--dark-font);
+}
+
+.fields {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  gap: 1.5rem;
 }
 
 .field {
@@ -156,13 +148,13 @@ input {
   padding: 0.6em 0.6em;
   font-size: 1.15rem;
   width: min(80%, 40ch);
-  border: 1px solid rgb(201, 201, 201);
+  border: 1px solid var(--background-light);
   border-radius: 0.25rem;
 }
 
 input:focus  {
   background-color: transparent;
-  box-shadow: 0.25rem 0.25rem 0.25rem rgb(0 0 0 / 0.1);
+  box-shadow: 0.25rem 0.25rem 0.25rem var(--shadow-color);
 }
 
 input:user-invalid {
@@ -174,7 +166,7 @@ input:placeholder-shown {
 }
 
 button {
-  color: white;
+  color: var(--font-light);
   font-size: 1rem;
   font-weight: bold;
   padding: 1em 3em;
@@ -183,4 +175,15 @@ button {
   border: none;
   border-radius: 0.25em;
   box-shadow: 0.25rem 0.25rem 0.25rem var(--shadow-color);
+}
+
+#prompt > p {
+  color: var(--dark-font);
+  margin-left: 3rem;
+}
+
+#prompt > p > a {
+  color: var(--accent-color);;
+  font-weight: bold;
+  text-decoration: none;
 }
