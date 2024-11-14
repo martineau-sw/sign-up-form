@@ -21,13 +21,13 @@
   --shadow-color: rgb(0 0 0 / 0.1);
   --dark-font: rgb(32 32 32);
   --light-font: rgb(235 235 235);
+  font-size: clamp(6px, 3vw, 16px);
 }
 
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   font-family: 'Arial', 'Helvetica', sans-serif;
 }
@@ -40,26 +40,46 @@ body {
   color: transparent;
   background-image: url("./res/img/fern-halie-west-unsplash.jpg");
   background-size:cover;
+  padding: 12rem 0 1rem;
   flex: 2;
 }
 
 #prompt {
-  flex: 3;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   background-color: var(--light-font);
-  padding: 6rem 0;
+  padding: 12rem 0;
+  flex: 3;
 }
 
 #banner {
   position: relative;
-  top: 20vh;
   display: flex;
   background-color: rgb(0 0 0 / 0.5);
   align-items: center;
   justify-content: center;
   padding: 1em;
+}
+
+#shill {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: rgb(32, 32, 32);
+  width: clamp(18ch, 75%, 60ch);
+}
+
+#prompt > #shill,
+#form > p, 
+fieldset {
+  padding: 0 3rem;
+}
+
+.fields {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: center;
+  gap: 1.5rem;
 }
 
 h1 {
@@ -77,20 +97,11 @@ footer {
   align-items: center;
   color: whitesmoke;
   font-weight: 100;
-  margin-bottom: 1rem;
 }
 
 footer > a {
   color: inherit;
   padding: 0 0.5ch;
-}
-
-#shill {
-  font-weight: bold;
-  font-size: 1.5rem;
-  margin: 3rem var(--prompt-margin);
-  color: rgb(32, 32, 32);
-  width: 55ch;
 }
 
 #shill > p {
@@ -109,10 +120,12 @@ footer > a {
 }
 
 fieldset {
+  display: flex;
+  flex-direction: column;
   background-color: white;
   border: none;
   box-shadow: 0em 0.25em 0.5em rgb(0 0 0 / 0.2);
-  padding: 0 1rem 3rem var(--prompt-margin);
+  padding-bottom: 3rem;
 }
 
 fieldset > p {
@@ -122,11 +135,9 @@ fieldset > p {
   color: var(--dark-font);
 }
 
-.fields {
-  display: flex;
-  flex-flow: row wrap;
-  align-content: center;
-  gap: 1.5rem 5rem;
+.field {
+  flex: auto;
+  width: clamp(30ch, 40%, 40ch);
 }
 
 label{
@@ -143,8 +154,8 @@ input {
   position: relative;
   height: 1rem;
   padding: 0.6em 0.6em;
-  width: 30ch;
   font-size: 1.15rem;
+  width: min(80%, 40ch);
   border: 1px solid rgb(201, 201, 201);
   border-radius: 0.25rem;
 }
