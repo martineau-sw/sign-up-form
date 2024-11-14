@@ -41,6 +41,9 @@ Create a landing page that accepts sign-up information on a form with decorative
 	- [ ] Background image
 - [ ] Create index.html and style.css
 - [ ] Structure HTML
+	- [ ] Head
+		- [ ] Link stylesheet
+		- [ ] Link font
 	- [ ] Splash container
 		- [ ] Banner container
 			- [ ] Odin logo
